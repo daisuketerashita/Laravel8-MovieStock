@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\StockController;
+use App\Http\Controllers\PlanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,11 +14,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//ホーム画面（観た映画一覧ページ）
+Route::get('/', [StockController::class, 'index'])->name('index');
