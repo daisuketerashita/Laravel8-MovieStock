@@ -26,4 +26,6 @@ Route::get('/', [StockController::class, 'index'])->name('index');
 Route::group(['middleware' => 'auth'],function(){
     //観た映画登録ページの表示
     Route::get('/stock/',[StockController::class,'create'])->name('create');
+    //観た映画登録
+    Route::post('/stock/store/',[StockController::class,'store'])->name('store');
 });
