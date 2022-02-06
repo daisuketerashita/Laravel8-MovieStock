@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -82,8 +82,8 @@
             </div>
         </nav>
 
-        <!-- フラッシュメッセージ -->
-        @if (session('flash_message'))
+         <!-- フラッシュメッセージ -->
+         @if (session('flash_message'))
             <div class="flash_message bg-success text-center py-3 my-0 mb30">
                 {{ session('flash_message') }}
             </div>
