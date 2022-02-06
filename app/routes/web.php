@@ -31,4 +31,6 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('/detail/{id}/',[StockController::class,'detail'])->name('detail');
     //観た映画の削除機能
     Route::get('/delete/',[StockController::class,'delete'])->name('delete');
+    //観たい映画一覧
+    Route::get('/plan/',[PlanController::class,'index'])->name('plan');
 });
