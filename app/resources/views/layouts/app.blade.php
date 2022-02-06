@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -26,8 +26,8 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ route('index') }}">
-                    <img class='navbar-logo' src="{{ asset('images/logo.png') }}">
+                <a class="navbar-brand" href="{{ url('/') }}">
+                <img class='navbar-logo' src="{{ asset('images/logo.png') }}">
                     観た映画
                 </a>
                 <a class="navbar-brand" href="#">
@@ -81,7 +81,7 @@
                 </div>
             </div>
         </nav>
-        
+
         <!-- フラッシュメッセージ -->
         @if (session('flash_message'))
             <div class="flash_message bg-success text-center py-3 my-0 mb30">
