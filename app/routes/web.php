@@ -28,4 +28,6 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('/stock/',[StockController::class,'create'])->name('create');
     //観た映画登録
     Route::post('/stock/store/',[StockController::class,'store'])->name('store');
+    //観た映画の詳細ページ
+    Route::get('/detail/{id}/',[StockController::class,'detail'])->name('detail');
 });
