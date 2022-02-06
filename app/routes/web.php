@@ -32,5 +32,7 @@ Route::group(['middleware' => 'auth'],function(){
     //観た映画の削除機能
     Route::get('/delete/',[StockController::class,'delete'])->name('delete');
     //観たい映画一覧
-    Route::get('/plan/',[PlanController::class,'index'])->name('plan');
+    Route::get('/plan/',[PlanController::class,'index'])->name('index.plan');
+    //観たい映画登録ページ
+    Route::get('/plan/add/',[PlanController::class,'create'])->name('create.plan');
 });
