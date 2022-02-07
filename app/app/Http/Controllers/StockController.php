@@ -15,7 +15,7 @@ class StockController extends Controller
         //ユーザーに紐付いた一覧を取得
         $stocks = Auth::user()->stocks()->orderBy('created_at', 'DESC')->simplePaginate(6);
 
-        return view('index',compact('stocks'));
+        return view('stock.index',compact('stocks'));
     }
 
     //観た映画の詳細ページ
@@ -23,13 +23,13 @@ class StockController extends Controller
     {
         //ユーザーに紐付いた詳細ページを取得
         $stock = Auth::user()->stocks()->where('id',$id)->first();
-        return view('detail',compact('stock'));
+        return view('stock.detail',compact('stock'));
     }
 
     //観た映画登録ページの表示
     public function create()
     {
-        return view('stock');
+        return view('stock.add');
     }
 
     //観た映画の登録処理
