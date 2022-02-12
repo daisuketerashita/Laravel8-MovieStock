@@ -12,8 +12,6 @@
 .howto-innner h2 {
     font-size: 1.2rem;
 }
-
-
 .howto-innner img{
     width: 100%;
     text-align: center;
@@ -21,4 +19,8 @@
 }
 .howto-container a {
     color: #fff;
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    padding: 10px;
 } 
