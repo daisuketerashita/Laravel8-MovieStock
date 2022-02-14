@@ -14,6 +14,20 @@
         <p class='h2 mb20'>{{ $stock->title }}</p>
         <h2 class='h2'>鑑賞日</h2>
         <p class="date_text">{{ $stock->due_date }}</p>
+        <h2 class='h2'>レビュー</h2>
+        <div class="rate-view">
+        @if(!empty($stock->star))
+        <h4 class="star_zero star_{{ $stock->star }}">
+          <span>★</span>
+          <span>★</span>
+          <span>★</span>
+          <span>★</span>
+          <span>★</span>
+        </h4>
+        @else
+        <h4 class="star_zero">★ ★ ★ ★ ★</h4>
+        @endif
+        </div>
       </section>  
       <aside class='review-image'>
         @if(!empty($stock->image))

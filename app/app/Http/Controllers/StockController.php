@@ -43,7 +43,16 @@ class StockController extends Controller
             'due_date' => 'required',
             'image' => 'mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-        if($request->hasFile('image')){
+        if($request->hasFile('image') && $request->has('rate')){
+            $request->file('image')->store('/public/images');
+            $data = [
+                'user_id' => \Auth::id(),
+                'title' => $post['title'],
+                'star' => $request['rate'],
+                'due_date' => $post['due_date'],
+                'image' => $request->file('image')->hashName()
+            ];
+        }elseif($request->hasFile('image')){
             $request->file('image')->store('/public/images');
             $data = [
                 'user_id' => \Auth::id(),
@@ -51,7 +60,15 @@ class StockController extends Controller
                 'due_date' => $post['due_date'],
                 'image' => $request->file('image')->hashName()
             ];
-        }else{
+        }elseif($request->has('rate')){
+            $data = [
+                'user_id' => \Auth::id(),
+                'title' => $post['title'],
+                'star' => $request['rate'],
+                'due_date' => $post['due_date'],
+            ];
+        }
+        else{
             $data = [
                 'user_id' => \Auth::id(),
                 'title' => $post['title'],

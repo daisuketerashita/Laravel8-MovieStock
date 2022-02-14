@@ -19,13 +19,53 @@
 .btn-delete_stock:hover{
     color: #fff;
 }
-
 .review-main h2{
     width: 80%;
     border-bottom: 2px dotted #000;
     margin-bottom: 2%;
 }
-
 .date_text{
     font-size: 1.4rem;
+}
+
+/* 星レビュー */
+/* .star_zero span{
+    display: inline-block;
+} */
+/* 星1つ */
+.star_1 span:nth-of-type(1) {
+    position: relative;
+    color: #ffcc00;
+    font-size: 35px;
+}
+/* 星2つ */
+.star_2 span:nth-child(-n + 2) {
+    position: relative;
+    color: #ffcc00;
+    font-size: 35px;
+}
+/* 星3つ */
+.star_3 span:nth-child(-n + 3) {
+    position: relative;
+    color: #ffcc00;
+    font-size: 35px;
+}
+/* 星4つ */
+.star_4 span:nth-child(-n + 4) {
+    position: relative;
+    color: #ffcc00;
+    font-size: 35px;
+}
+/* 星5つ */
+.star_5 span{
+    position: relative;
+    color: #ffcc00;
+    font-size: 35px;
+}
+
+/* レビューなし */
+.rate-view .star_zero{
+    position: relative;
+    color: #ccc;
+    font-size: 35px;
 }
