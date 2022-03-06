@@ -2736,6 +2736,10 @@ fieldset:disabled a.btn {
   background-color: #3490dc;
   border-color: #3490dc;
 }
+.btn-back{
+  color: #3490dc;
+  margin-left: 20px;
+}
 
 .btn-primary:hover {
   color: #fff;

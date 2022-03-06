@@ -29,6 +29,7 @@
                 <input type="file" id="file1" name='image' class="form-control-file">
               </div>
               <input type='submit' class='btn btn-primary' value='登録'>
+              <a href="{{ route('plan.index') }}"  class='btn-back'>戻る</a>
             </div>
         </div>
       </form>

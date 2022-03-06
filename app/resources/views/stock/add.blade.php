@@ -44,6 +44,7 @@
                 <label for="star1">★</label>
               </div>
               <input type='submit' class='btn btn-primary' value='登録'>
+              <a href="{{ route('index') }}"  class='btn-back'>戻る</a>
             </div>
         </div>
       </form>
