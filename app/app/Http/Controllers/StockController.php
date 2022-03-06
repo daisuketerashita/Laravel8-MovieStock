@@ -13,7 +13,7 @@ class StockController extends Controller
     public function index()
     {
         //ユーザーに紐付いた一覧を取得
-        $stocks = Auth::user()->stocks()->orderBy('created_at', 'DESC')->simplePaginate(6);
+        $stocks = Auth::user()->stocks()->orderBy('created_at', 'DESC')->SimplePaginate(6);
 
         return view('stock.index',compact('stocks'));
     }
